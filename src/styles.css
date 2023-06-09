@@ -1,0 +1,52 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 2em;
+    color: white;
+    background-color: #3D3D3D;
+}
+
+h1 {
+    font-style: italic;
+    color: #FF6F00;
+}
+
+video {
+    display: block;
+}
+
+section {
+    opacity: 1;
+    transition: opacity 500ms ease-in-out;
+}
+
+removed {
+    display: none;
+}
+
+.invisible {
+    opacity: 0.2;
+}
+
+.camView {
+    position: relative;
+    float: left;
+    width: calc(100% - 20px);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.camView p {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.55);
+    color: black;
+    z-index: 2;
+    font-weight: bolder;
+
+}
+
+.highlighter {
+    background: rgba(255, 255, 0, 0.1);
+    border: 0.25rem dashed rgb(255, 255, 0);
+    z-index: 1;
+    position: absolute;
+}

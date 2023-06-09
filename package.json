@@ -1,0 +1,19 @@
+{
+  "name": "smartwebcam",
+  "version": "1.0.0",
+  "description": "webcam utilisant machine learning",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "julien guilbaud",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.2"
+  },
+  "dependencies": {
+
+  }
+}
