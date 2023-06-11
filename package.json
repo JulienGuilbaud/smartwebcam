@@ -11,9 +11,7 @@
   "author": "julien guilbaud",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.2",
     "parcel": "^2.9.2"
-  },
-  "dependencies": {
-
   }
 }

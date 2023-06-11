@@ -1,8 +1,14 @@
 body {
     font-family: helvetica, arial, sans-serif;
-    margin: 2em;
     color: white;
     background-color: #3D3D3D;
+    background-image:url(./image/download.png), url(./image/machinebg.png);
+    background-size: contain,contain;
+    background-repeat: repeat,repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
@@ -45,8 +51,12 @@ removed {
 }
 
 .highlighter {
-    background: rgba(255, 255, 0, 0.1);
-    border: 0.25rem dashed rgb(255, 255, 0);
+   
+   border: none transparent;
     z-index: 1;
     position: absolute;
+    background-image: url(./image/samaritan-indicator-orange.png);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
