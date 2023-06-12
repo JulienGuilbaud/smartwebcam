@@ -2,25 +2,59 @@ body {
     font-family: helvetica, arial, sans-serif;
     color: white;
     background-color: #3D3D3D;
-    background-image:url(./image/download.png), url(./image/machinebg.png);
-    background-size: contain,contain;
-    background-repeat: repeat,repeat;
+    background-image: url(./image/download.png), url(./image/samaritanbg.png);
+    background-size: contain, contain;
+    background-repeat: repeat, repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    box-sizing: border-box;
 }
 
 h1 {
-    font-style: italic;
-    color: #FF6F00;
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding: 0.25rem;
+    text-align: center;
+    background: rgba(255, 0, 0, 0.8);
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.8);
 }
 
 video {
     display: block;
 }
+ul{
+ background: rgba(0, 0, 0, 0.8);
 
-section {
+}
+
+li {
+    list-style-type: square;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    
+    padding:0.5rem;
+}
+span{
+
+    text-align: center;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: black;
+    background: lightgray;
+    padding: 0.25rem;
+    margin-left: 0.25rem;
+    
+    
+}
+
+.demos {
     opacity: 1;
     transition: opacity 500ms ease-in-out;
 }
@@ -51,8 +85,8 @@ removed {
 }
 
 .highlighter {
-   
-   border: none transparent;
+
+    border: none transparent;
     z-index: 1;
     position: absolute;
     background-image: url(./image/samaritan-indicator-orange.png);

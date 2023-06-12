@@ -4,13 +4,18 @@
 const video = document.getElementById('webcam');
 const liveView = document.getElementById('liveView');
 const demosSection = document.getElementById('demos');
+const stateNAV= document.getElementById('NAV');
+const stateMOD= document.getElementById('MOD');
+const stateWCAM= document.getElementById('WCAM')
+const stateSAM= document.getElementById('SAM')
 
 
 
 //Vérifier la prise en charge de la webcam
 if (getUserMediaSupported()) {
-  console.log("prise en charge du navivateur");
+  stateNAV.textContent="pris en charge"
 } else {
+  stateNAV.textContent="non pris en charge"
   console.warn(' non pris en charge par votre navigateur');
 }
 function getUserMediaSupported() {
@@ -20,23 +25,25 @@ function getUserMediaSupported() {
 
 //Récupérer le flux de la webcam
 function enableCam() {
-  console.log("activation webcam");
+ 
   // getUsermedia parameters to force video but not audio.
   const constraints = {
     video: true
   };
   // Activate the webcam stream.
   navigator.mediaDevices.getUserMedia(constraints).then(function (stream) {
-    video.srcObject = stream;
+    video.srcObject = stream; 
     video.addEventListener('loadeddata', predictWebcam);
+    stateWCAM.textContent="connectée"
+
   });
 }
 
 //Chargement du modèle
 let model = undefined;
 cocoSsd.load().then(function (loadedModel) {
-  console.log("model chargé");
   model = loadedModel;
+  stateMOD.textContent="chargé"
   enableCam()
 
 });
@@ -45,6 +52,10 @@ cocoSsd.load().then(function (loadedModel) {
 const children = [];
 
 function predictWebcam() {
+
+  stateSAM.textContent="activé"
+
+ 
 
   model.detect(video).then(function (predictions) {
     for (let i = 0; i < children.length; i++) {
@@ -55,7 +66,7 @@ function predictWebcam() {
 
     for (let n = 0; n < predictions.length; n++) {
 
-      console.log(predictions[n]);
+   
       // réglage de la prédiction sur 33%
       if (predictions[n].score > 0.33) {
         const p = document.createElement('p');
@@ -66,7 +77,7 @@ function predictWebcam() {
           + (predictions[n].bbox[1]) + 'px; width: '
           + (predictions[n].bbox[2]) + 'px; top: 0; left: 0;';
 
-        const highlighter = document.createElement('span');
+        const highlighter = document.createElement('div');
         highlighter.setAttribute('class', 'highlighter');
         
         highlighter.style = 'left: ' + (predictions[n].bbox[0]+20) + 'px; top: '
