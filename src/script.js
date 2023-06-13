@@ -1,5 +1,4 @@
 
-
 //Référencement des éléments clés du DOM
 const video = document.getElementById('webcam');
 const liveView = document.getElementById('liveView');
