@@ -66,8 +66,8 @@ function predictWebcam() {
     for (let n = 0; n < predictions.length; n++) {
 
    
-      // réglage de la prédiction sur 33%
-      if (predictions[n].score > 0.33) {
+      // réglage de la prédiction sur 51%
+      if (predictions[n].score > 0.51) {
         const p = document.createElement('p');
         p.textContent =
           predictions[n].class + ' avec ' + Math.round(parseFloat(predictions[n].score) * 100) + '% de confiance.';
