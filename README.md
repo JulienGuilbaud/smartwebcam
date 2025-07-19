@@ -1,13 +1,13 @@
  # Smart Webcam - Détection d'Objets en Temps Réel
  
- [![Deploy with Vercel](https://vercel.com/button)](https://smartwebcam-demo.vercel.app/)
+ [![Deploy with Vercel](https://vercel.com/button)](https://smartwebcam.vercel.app/)
  
  Ce projet est une application web simple qui utilise TensorFlow.js et le modèle pré-entraîné COCO-SSD pour effectuer de la détection d'objets en temps réel à partir du flux d'une webcam.
  
  ## 🚀 Démo Live
  
  Une version de démonstration est déployée sur Vercel. Vous pouvez la tester ici :
- **[https://smartwebcam-demo.vercel.app/](https://smartwebcam-demo.vercel.app/)**
+ **[https://smartwebcam.vercel.app/](https://smartwebcam.vercel.app/)**
  
  ## ✨ Fonctionnalités
  
